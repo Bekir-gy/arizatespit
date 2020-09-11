@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arizatespit.televizyonController">
+   <children>
+      <TextField fx:id="te_id" layoutX="61.0" layoutY="89.0" prefHeight="25.0" prefWidth="115.0" promptText="ID" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="te_fiyat" layoutX="61.0" layoutY="128.0" prefHeight="25.0" prefWidth="115.0" promptText="FIYAT" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="te_inc" layoutX="61.0" layoutY="310.0" prefHeight="25.0" prefWidth="115.0" promptText="İNÇ" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="te_marka" layoutX="61.0" layoutY="352.0" prefHeight="25.0" prefWidth="115.0" promptText="MARKA" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="te_neden" layoutX="61.0" layoutY="434.0" prefHeight="25.0" prefWidth="115.0" promptText="NEDEN" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="te_tarih" layoutX="61.0" layoutY="471.0" prefHeight="25.0" prefWidth="115.0" promptText="TARİH" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="aratelevizyon" layoutX="55.0" layoutY="505.0" onKeyPressed="#ara" prefHeight="33.0" prefWidth="127.0" promptText="ARA" style="-fx-background-color: YELLOW;" />
+      <TextField fx:id="te_türü" layoutX="61.0" layoutY="397.0" prefHeight="25.0" prefWidth="115.0" promptText="TÜRÜ" style="-fx-background-color: ORANGE;" />
+      <TextArea fx:id="te_adres" blendMode="DARKEN" layoutX="55.0" layoutY="169.0" prefHeight="125.0" prefWidth="127.0" promptText="ADRES" style="-fx-background-color: ORANGE;" />
+      <TableView fx:id="tableview5" layoutX="192.0" layoutY="65.0" onMouseClicked="#getSelected" prefHeight="540.0" prefWidth="597.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="192.0">
+         <columns>
+            <TableColumn fx:id="id5" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="fiyat5" prefWidth="75.0" text="fiyat" />
+            <TableColumn fx:id="adres5" prefWidth="75.0" text="adres" />
+            <TableColumn fx:id="inc5" prefWidth="75.0" text="inç" />
+            <TableColumn fx:id="marka5" prefWidth="75.0" text="marka" />
+            <TableColumn fx:id="türü5" prefWidth="75.0" text="türü" />
+            <TableColumn fx:id="neden5" prefWidth="75.0" text="neden" />
+            <TableColumn fx:id="tarih5" prefWidth="75.0" text="tarih" />
+         </columns>
+      </TableView>
+      <Button layoutX="799.0" layoutY="69.0" mnemonicParsing="false" onAction="#ekle" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: GREEN;" text="EKLE" />
+      <Button layoutX="798.0" layoutY="129.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: YELLOW;" text="GÜNCELLE" />
+      <Button layoutX="799.0" layoutY="186.0" mnemonicParsing="false" onAction="#sil" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: RED;" text="SİL" />
+      <Label alignment="CENTER" layoutX="218.0" layoutY="14.0" prefHeight="42.0" prefWidth="527.0" style="-fx-background-color: GRAY;" text="TELEVİZYON ARIZA TAKİP" textFill="#25d0eb" textOverrun="CLIP">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </Label>
+      <Button layoutX="61.0" layoutY="38.0" mnemonicParsing="false" onAction="#geri" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: BLUE;" text="GERİ" AnchorPane.topAnchor="27.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection bottomOpacity="0.08" fraction="0.17" topOpacity="0.46" />
+         </effect></Button>
+   </children>
+</AnchorPane>

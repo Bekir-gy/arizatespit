@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="991.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arizatespit.beyazesyaController">
+   <children>
+      <TableView fx:id="tableview" layoutX="165.0" layoutY="71.0" onMouseClicked="#getSelected" prefHeight="540.0" prefWidth="527.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="299.0" AnchorPane.topAnchor="71.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="fiyat" prefWidth="75.0" text="fiyat" />
+            <TableColumn fx:id="adres" prefWidth="75.0" text="adres" />
+          <TableColumn fx:id="marka" prefWidth="75.0" text="marka" />
+          <TableColumn fx:id="model" prefWidth="75.0" text="model" />
+            <TableColumn fx:id="neden" prefWidth="75.0" text="neden" />
+            <TableColumn fx:id="tarih" prefWidth="75.0" text="tarih" />
+        </columns>
+      </TableView>
+      <TextField fx:id="b_id" layoutX="31.0" layoutY="91.0" prefHeight="25.0" prefWidth="115.0" promptText="ID" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="b_fiyat" layoutX="31.0" layoutY="131.0" prefHeight="25.0" prefWidth="115.0" promptText="FIYAT" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="b_marka" layoutX="31.0" layoutY="304.0" prefHeight="25.0" prefWidth="115.0" promptText="MARKA" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="b_model" layoutX="31.0" layoutY="339.0" prefHeight="25.0" prefWidth="115.0" promptText="MODEL" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="b_neden" layoutX="31.0" layoutY="378.0" prefHeight="25.0" prefWidth="115.0" promptText="NEDEN" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="b_tarih" layoutX="31.0" layoutY="413.0" prefHeight="25.0" prefWidth="115.0" promptText="TARİH" style="-fx-background-color: ORANGE;" />
+      <Button layoutX="709.0" layoutY="71.0" mnemonicParsing="false" onAction="#ekle" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: GREEN;" text="EKLE" />
+      <Button layoutX="708.0" layoutY="131.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: YELLOW;" text="GÜNCELLE" />
+      <Button layoutX="709.0" layoutY="188.0" mnemonicParsing="false" onAction="#sil" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: RED;" text="SİL" />
+      <TextField fx:id="arabeyaz" layoutX="25.0" layoutY="450.0" onKeyPressed="#ara" prefHeight="33.0" prefWidth="127.0" promptText="ARA" style="-fx-background-color: YELLOW;" />
+      <Label alignment="CENTER" layoutX="165.0" layoutY="23.0" prefHeight="42.0" prefWidth="527.0" style="-fx-background-color: GRAY;" text="BEYAZ EŞYA TAKİP" textFill="#25d0eb" textOverrun="CLIP">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </Label>
+      <Button layoutX="28.0" layoutY="32.0" mnemonicParsing="false" onAction="#geri" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: BLUE;" text="GERİ">
+         <effect>
+            <Reflection bottomOpacity="0.08" fraction="0.17" topOpacity="0.46" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <TextArea fx:id="b_adres" blendMode="DARKEN" layoutX="31.0" layoutY="166.0" prefHeight="125.0" prefWidth="115.0" promptText="ADRES" style="-fx-background-color: ORANGE;" />
+   </children>
+</AnchorPane>

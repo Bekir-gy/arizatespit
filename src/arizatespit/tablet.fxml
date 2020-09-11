@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arizatespit.tabletController">
+   <children>
+      <TextField fx:id="ta_id" layoutX="51.0" layoutY="111.0" prefHeight="25.0" prefWidth="115.0" promptText="ID" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="ta_fiyat" layoutX="51.0" layoutY="151.0" prefHeight="25.0" prefWidth="115.0" promptText="FIYAT" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="ta_inc" layoutX="51.0" layoutY="330.0" prefHeight="25.0" prefWidth="115.0" promptText="İNÇ" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="ta_marka" layoutX="51.0" layoutY="367.0" prefHeight="25.0" prefWidth="115.0" promptText="MARKA" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="ta_neden" layoutX="51.0" layoutY="402.0" prefHeight="25.0" prefWidth="115.0" promptText="NEDEN" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="ta_tarih" layoutX="51.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" promptText="TARİH" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="aratablet" layoutX="45.0" layoutY="475.0" onKeyPressed="#ara" prefHeight="33.0" prefWidth="127.0" promptText="ARA" style="-fx-background-color: YELLOW;" />
+      <TableView fx:id="tableview4" layoutX="185.0" layoutY="91.0" onMouseClicked="#getSelected" prefHeight="540.0" prefWidth="527.0">
+         <columns>
+            <TableColumn fx:id="id4" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="fiyat4" prefWidth="75.0" text="fiyat" />
+            <TableColumn fx:id="adres4" prefWidth="75.0" text="adres" />
+            <TableColumn fx:id="inc4" prefWidth="75.0" text="inç" />
+            <TableColumn fx:id="marka4" prefWidth="75.0" text="marka" />
+            <TableColumn fx:id="neden4" prefWidth="75.0" text="neden" />
+            <TableColumn fx:id="tarih4" prefWidth="75.0" text="tarih" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tableview4" layoutX="185.0" layoutY="91.0" onMouseClicked="#getSelected" prefHeight="540.0" prefWidth="527.0">
+         <columns>
+            <TableColumn fx:id="id4" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="fiyat4" prefWidth="75.0" text="fiyat" />
+            <TableColumn fx:id="adres4" prefWidth="75.0" text="adres" />
+            <TableColumn fx:id="inc4" prefWidth="75.0" text="inç" />
+            <TableColumn fx:id="marka4" prefWidth="75.0" text="marka" />
+            <TableColumn fx:id="neden4" prefWidth="75.0" text="neden" />
+            <TableColumn fx:id="tarih4" prefWidth="75.0" text="tarih" />
+         </columns>
+      </TableView>
+      <Button layoutX="729.0" layoutY="91.0" mnemonicParsing="false" onAction="#ekle" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: GREEN;" text="EKLE" />
+      <Button layoutX="728.0" layoutY="151.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: YELLOW;" text="GÜNCELLE" />
+      <Button layoutX="729.0" layoutY="208.0" mnemonicParsing="false" onAction="#sil" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: RED;" text="SİL" />
+      <Label alignment="CENTER" layoutX="185.0" layoutY="43.0" prefHeight="42.0" prefWidth="527.0" style="-fx-background-color: GRAY;" text="TABLET-PC ARIZA TAKİP" textFill="#25d0eb" textOverrun="CLIP">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </Label>
+      <TextArea fx:id="ta_adres" blendMode="DARKEN" layoutX="51.0" layoutY="191.0" prefHeight="125.0" prefWidth="115.0" promptText="ADRES" style="-fx-background-color: ORANGE;" />
+      <Button layoutX="51.0" layoutY="49.0" mnemonicParsing="false" onAction="#geri" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: BLUE;" text="GERİ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection bottomOpacity="0.08" fraction="0.17" topOpacity="0.46" />
+         </effect></Button>
+   </children>
+</AnchorPane>

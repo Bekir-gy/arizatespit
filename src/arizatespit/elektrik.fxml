@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arizatespit.elektrikController">
+   <children>
+      <TextField fx:id="e_id" layoutX="71.0" layoutY="131.0" prefHeight="25.0" prefWidth="115.0" promptText="ID" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="e_fiyat" layoutX="71.0" layoutY="171.0" prefHeight="25.0" prefWidth="115.0" promptText="FIYAT" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="e_sigorta" layoutX="71.0" layoutY="341.0" prefHeight="25.0" prefWidth="115.0" promptText="AMPER DEĞERİ" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="e_marka" layoutX="71.0" layoutY="384.0" prefHeight="25.0" prefWidth="115.0" promptText="SİGORTA MARKASI" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="e_neden" layoutX="71.0" layoutY="424.0" prefHeight="25.0" prefWidth="115.0" promptText="NEDEN" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="e_tarih" layoutX="71.0" layoutY="467.0" prefHeight="25.0" prefWidth="115.0" promptText="TARİH" style="-fx-background-color: ORANGE;" />
+      <TextField fx:id="araelektrik" layoutX="65.0" layoutY="505.0" onKeyPressed="#ara" prefHeight="33.0" prefWidth="127.0" promptText="ARA" style="-fx-background-color: YELLOW;" />
+      <TextArea fx:id="e_adres" blendMode="DARKEN" layoutX="71.0" layoutY="206.0" prefHeight="125.0" prefWidth="115.0" promptText="ADRES" style="-fx-background-color: ORANGE;" />
+      <TableView fx:id="tableview6" layoutX="205.0" layoutY="111.0" onMouseClicked="#getSelected" prefHeight="540.0" prefWidth="527.0">
+         <columns>
+            <TableColumn fx:id="id6" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="fiyat6" prefWidth="75.0" text="fiyat" />
+            <TableColumn fx:id="adres6" prefWidth="75.0" text="adres" />
+            <TableColumn fx:id="hız6" prefWidth="75.0" text="hız" />
+            <TableColumn fx:id="modem6" prefWidth="75.0" text="modem türü" />
+            <TableColumn fx:id="neden6" prefWidth="75.0" text="neden" />
+            <TableColumn fx:id="tarih6" prefWidth="75.0" text="tarih" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tableview7" layoutX="205.0" layoutY="111.0" onMouseClicked="#getSelected" prefHeight="540.0" prefWidth="553.0">
+         <columns>
+            <TableColumn fx:id="id7" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="fiyat7" prefWidth="75.0" text="fiyat" />
+            <TableColumn fx:id="adres7" prefWidth="75.0" text="adres" />
+            <TableColumn fx:id="sigorta7" prefWidth="94.0" text="amper değeri" />
+            <TableColumn fx:id="marka7" prefWidth="99.0" text="sigorta markası" />
+            <TableColumn fx:id="neden7" prefWidth="64.0" text="neden" />
+            <TableColumn fx:id="tarih7" prefWidth="69.0" text="tarih" />
+         </columns>
+      </TableView>
+      <Button layoutX="774.0" layoutY="111.0" mnemonicParsing="false" onAction="#ekle" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: GREEN;" text="EKLE" />
+      <Button layoutX="774.0" layoutY="170.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: YELLOW;" text="GÜNCELLE" />
+      <Button layoutX="774.0" layoutY="231.0" mnemonicParsing="false" onAction="#sil" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: RED;" text="SİL" />
+      <Label alignment="CENTER" layoutX="205.0" layoutY="63.0" prefHeight="42.0" prefWidth="553.0" style="-fx-background-color: GRAY;" text="ELEKTRİK ARIZA TAKİP" textFill="#25d0eb" textOverrun="CLIP">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </Label>
+      <Button layoutX="71.0" layoutY="76.0" mnemonicParsing="false" onAction="#geri" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: BLUE;" text="GERİ" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection bottomOpacity="0.08" fraction="0.18" topOpacity="0.46" />
+         </effect></Button>
+   </children>
+</AnchorPane>
